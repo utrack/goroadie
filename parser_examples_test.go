@@ -1,10 +1,10 @@
-package goyaec_test
+package goroadie_test
 
 import (
 	"fmt"
 	"os"
 
-	"github.com/utrack/goyaec"
+	"github.com/utrack/goroadie"
 )
 
 // This example shows the basic usage.
@@ -28,7 +28,7 @@ func ExampleProcess() {
 	conf := Config{}
 
 	// Remember to pass the pointer!
-	err := goyaec.Process("app", &conf)
+	err := goroadie.Process("app", &conf)
 
 	if err != nil {
 		panic(err)
@@ -71,7 +71,7 @@ func ExampleProcess_advanced() {
 	conf := FooType{}
 
 	// Remember to pass the pointer!
-	err := goyaec.Process("pref", &conf)
+	err := goroadie.Process("pref", &conf)
 
 	if err != nil {
 		panic(err)
@@ -102,7 +102,7 @@ func ExampleProcess_map() {
 	// will be saved!
 	t.B = map[string]string{"Foo":"prevFoo","SomeVar":"wow"}
 
-	err := goyaec.Process("",&t)
+	err := goroadie.Process("",&t)
 	if err != nil {
 		panic(err)
 	}

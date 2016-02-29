@@ -1,9 +1,9 @@
-// Package goyaec provides the decoder of environment variables
+// Package goroadie provides the decoder of environment variables
 // to Go structs.
 //
 // It can be used on config loading stage to override
 // previously loaded settings (or load the full config altogether).
-package goyaec
+package goroadie
 
 import (
 	"fmt"

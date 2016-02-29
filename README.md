@@ -1,4 +1,4 @@
-# goyaec [![](https://godoc.org/github.com/utrack/goyaec?status.svg)](http://godoc.org/github.com/utrack/goyaec)
+# goroadie [![](https://godoc.org/github.com/utrack/goroadie?status.svg)](http://godoc.org/github.com/utrack/goroadie)
 Yet another envvar parser for Go.
 
 ## Features
@@ -11,11 +11,11 @@ Members' names can be overridden using the `env` tag: `type Foo struct { Bar str
 ## Installation
 Pretty standard, use the `go get` tool:
 ````
-go get github.com/utrack/goyaec
+go get github.com/utrack/goroadie
 ````
 
 ## Usage
-Just make the struct and pass it! Check [examples](https://godoc.org/github.com/utrack/goyaec#ex-Process--Map) for more.
+Just make the struct and pass it! Check [examples](https://godoc.org/github.com/utrack/goroadie#ex-Process--Map) for more.
 ````
 type Database struct {
     Active bool `env:"enabled"`
@@ -31,7 +31,7 @@ type Config struct {
 
 conf := Config{}
 
-err := goyaec.Process("YOURAPP",&conf)
+err := goroadie.Process("YOURAPP",&conf)
 ````
 Variables scanned in the example:
 
@@ -46,4 +46,4 @@ YOURAPP_SECONDARY_TYPE
 YOURAPP_SECONDARY_URI
 YOURAPP_SECONDARY_OPTS_*
 ````
-If any config map was initialized and loaded before it won't lose any keys (only replaced): check the [examples](https://godoc.org/github.com/utrack/goyaec#ex-Process--Map) for more.
+If any config map was initialized and loaded before it won't lose any keys (only replaced): check the [examples](https://godoc.org/github.com/utrack/goroadie#ex-Process--Map) for more.

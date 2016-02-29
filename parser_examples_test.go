@@ -9,8 +9,39 @@ import (
 
 // This example shows the basic usage.
 //
-// It shows how to parse basic structs and nested structs.
+// It shows how to parse basic structs and use the tag overrides.
 func ExampleProcess() {
+	type Config struct {
+		URI string
+		Type string
+		Active bool `env:"enabled"`
+	}
+
+	// Wireup variables
+	// You can use prefixes for structs.
+	os.Setenv("APP_URI", "blank://")
+	os.Setenv("APP_TYPE", "Your Type")
+
+	// Use tag "env" to change the envvar name.
+	os.Setenv("APP_ENABLED", "true")
+
+	conf := Config{}
+
+	// Remember to pass the pointer!
+	err := goyaec.Process("app", &conf)
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(conf)
+	// Output: {blank:// Your Type true}
+}
+
+// This example shows the advanced usage.
+//
+// It shows how to parse basic structs and nested structs with env tags.
+func ExampleProcess_advanced() {
 
 	type BarType struct {
 		C uint `env:"baz"`

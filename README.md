@@ -15,7 +15,7 @@ go get github.com/utrack/goyaec
 ````
 
 ## Usage
-Just make the struct and pass it!
+Just make the struct and pass it! Check [examples](https://godoc.org/github.com/utrack/goyaec#ex-Process--Map) for more.
 ````
 type Database struct {
     Active bool `env:"enabled"`

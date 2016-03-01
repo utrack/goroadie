@@ -1,3 +1,5 @@
+[![forthebadge](http://forthebadge.com/images/badges/compatibility-club-penguin.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/no-ragrets.svg)](http://forthebadge.com)
+
 # goroadie [![](https://godoc.org/github.com/utrack/goroadie?status.svg)](http://godoc.org/github.com/utrack/goroadie)
 Yet another envvar parser for Go.
 

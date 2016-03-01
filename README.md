@@ -1,7 +1,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/compatibility-club-penguin.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/no-ragrets.svg)](http://forthebadge.com)
 
 # goroadie [![](https://godoc.org/github.com/utrack/goroadie?status.svg)](http://godoc.org/github.com/utrack/goroadie)
-Yet another envvar parser for Go.
+Yet another envvar parser for Go. It does everything you expect - nothing more, nothing less.
 
 ## Features
 This parser can load structs and nested structs of any complexity along with `map[string]string` and basic types like `uint`,`int`,`string` and `bool`.
